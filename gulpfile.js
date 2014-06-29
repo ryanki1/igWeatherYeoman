@@ -2,7 +2,6 @@
 // generated on 2014-06-28 using generator-gulp-webapp 0.1.0
 
 var gulp = require('gulp');
-var deploy = require("gulp-gh-pages");
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -40,8 +39,8 @@ gulp.task('html', ['styles', 'scripts'], function () {
         .pipe($.useref.restore())
         .pipe($.useref())
         .pipe(gulp.dest('dist'))
-        .pipe(deploy())
-        .pipe($.size());
+        .pipe($.size())
+        .pipe($.ghPages());
 });
 
 gulp.task('images', function () {
