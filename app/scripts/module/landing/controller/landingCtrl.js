@@ -13,7 +13,7 @@ angular.module("landingModule")
         };
         $scope.lonlat = function(lonlat){
             return Math.abs(lonlat);
-        }
+        };
         $scope.title = "Ink Global Weather";
 
         weatherService.getWeather(function(data){

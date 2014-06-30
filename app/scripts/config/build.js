@@ -1,3 +1,4 @@
+"use strict";
 var IG_Weather = {
   env: "dev"
 };

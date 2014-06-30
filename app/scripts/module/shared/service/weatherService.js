@@ -1,6 +1,10 @@
 "use strict";
 
-angular.module("sharedModule")
+var IG_Weather = IG_Weather || {
+  env: "dev"
+};
+(function(){
+  angular.module("sharedModule")
 	.factory("weatherService", [
     "$http",
 		function($http){
@@ -16,7 +20,8 @@ angular.module("sharedModule")
               });
               
           }
-			}
+			};
 			return srv;
 		}
-	]) 
+	]);
+})(IG_Weather);

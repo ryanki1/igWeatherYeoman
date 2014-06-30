@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-angular.module('igWeather', [
+angular.module("igWeather", [
 	"landingModule",
   	"sharedModule"
 	])
 
-  .constant('version', 'v0.1.0')
+  .constant("version", "v0.1.0")
 
   .config(function($locationProvider) {
 
